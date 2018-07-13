@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>mvvm</title>
+  <script src="./observer.js"></script>
+  <script src="./watcher.js"></script>
+  <script src="./compile.js"></script>
+  <script src="./mvvm.js"></script>
+  <!-- <script src="http://cdn.bootcss.com/vue/1.0.25/vue.js"></script> -->
+</head>
+<body id="app">
+  <input type="text" v-model="msg">
+  <div v-text="a.b"></div>
+  <div>
+    {{msg}}
+  </div>
+</body>
+<script>
+  let vm = new MVVM({
+    el:"#app",
+    data:{
+      msg:"helloword",
+      a:{
+        b:"a"
+      }
+    }
+  })
+</script>
+</html>
